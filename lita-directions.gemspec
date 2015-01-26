@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name          = "lita-directions"
-  spec.version       = "0.0.3"
+  spec.version       = "0.0.6"
   spec.authors       = ["Dan Cash"]
   spec.email         = ["dancash04@gmail.com"]
   spec.description   = %q{Simple Lita gem to get time and distance between two points via google directions api}
