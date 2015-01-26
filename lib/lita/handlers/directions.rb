@@ -7,7 +7,7 @@ module Lita
 		def get_directions(response)
 			from = response.matches[0][0]
 			to = response.matches[0][1]
-			json_ip_url = "https://maps.googleapis.com/maps/api/directions/json?origin=#{from}&destination=#{to}&key=AIzaSyDMJ60u9SvoZ7Ui40DhWtFS1CumjXzUVJo"
+			json_ip_url = "https://maps.googleapis.com/maps/api/directions/json?origin=#{from}&destination=#{to}&key="
 			results = JSON.parse(RestClient.get(json_ip_url))
 			if results['routes'].any?
 				response.reply("It is #{results['routes'][0]['legs'][0]['distance']['text'].gsub('mi', 'miles')} or #{results['routes'][0]['legs'][0]['duration']['text'].gsub('mins', 'minutes')} from #{results['routes'][0]['legs'][0]['start_address'].gsub(', USA', '').gsub(/\d{5}/, '')} to #{results['routes'][0]['legs'][0]['end_address'].gsub(', USA', '').gsub(/\d{5}/, '')}")
