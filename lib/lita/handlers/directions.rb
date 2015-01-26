@@ -21,7 +21,7 @@ module Lita
 				response.reply("It is a #{results['routes'][0]['legs'][0]['distance']['text'].gsub('mi', 'miles')} drive from #{results['routes'][0]['legs'][0]['start_address'].gsub(', USA', '').gsub(/\d{5}/, '')} to #{results['routes'][0]['legs'][0]['end_address'].gsub(', USA', '').gsub(/\d{5}/, '')}. The approximate drive time is #{results['routes'][0]['legs'][0]['duration']['text'].gsub('mins', 'minutes')}."
 				response.reply(URI.encode("https://www.google.com/maps/dir/#{from}/#{to}/"))
 			else
-				response.reply(["Umm, you might want to double-check that.", "I think you did it wrong.", "There was an error, I think it was your fault.", "I'm pretty sure you messed up."].sample)
+				response.reply(["Umm, you might want to double-check that.", "I think you did it wrong.", "There was an error, I think it was your fault.", "I'm pretty sure you messed up.", "Are you sure you read the directions?"].sample)
 			end
 		end
 		
