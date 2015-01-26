@@ -1,7 +1,6 @@
 # lita-directions
 
-A handler for [Lita](http://lita.io/) returns the distance and time between two locations via the google directions api. 
-Also returns a link to the directions via google maps.
+A handler for [Lita](http://lita.io/) that returns the distance and time between two locations via the google directions api and also returns a link to the directions via google maps.
 
 ## Installation
 
@@ -13,7 +12,7 @@ gem "lita-directions"
 
 ## Configuration
 
-This plugin requires a api key from The Goodle Directions api.
+This plugin requires a api key from The Google Directions api.
 
 ``` ruby
 Lita.configure do |config|
