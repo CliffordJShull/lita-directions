@@ -1,11 +1,11 @@
 Gem::Specification.new do |spec|
   spec.name          = "lita-directions"
   spec.version       = "0.0.1"
-  spec.authors       = ["TODO: Write your name"]
-  spec.email         = ["TODO: Write your email address"]
-  spec.description   = %q{TODO: Add a description}
-  spec.summary       = %q{TODO: Add a summary}
-  spec.homepage      = "TODO: Add a homepage"
+  spec.authors       = ["Dan Cash"]
+  spec.email         = ["dancash04@gmail.com"]
+  spec.description   = %q{Simple Lita gem to get time and distance between two points via google directions api}
+  spec.summary       = %q{I'll add this later}
+  spec.homepage      = "http://dan.cash"
   spec.license       = "MIT"
   spec.metadata      = { "lita_plugin_type" => "handler" }
 

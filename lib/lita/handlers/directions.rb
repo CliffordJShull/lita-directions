@@ -2,12 +2,17 @@ module Lita
   module Handlers
     class Directions < Handler
 	
+		def self.default_config(config)
+			config.api_key = nil
+		end
+		
 		route(/^(?:how\s+far\s+is\s+it\s+from\s+)?(.+)\s+to(.+)/i, :get_directions, command: true )
 	
 		def get_directions(response)
+			return if Lita.config.handlers.directions.api_key.nil?
 			from = response.matches[0][0]
 			to = response.matches[0][1]
-			json_ip_url = "https://maps.googleapis.com/maps/api/directions/json?origin=#{from}&destination=#{to}&key="
+			json_ip_url = "https://maps.googleapis.com/maps/api/directions/json?origin=#{from}&destination=#{to}&key=#{Lita.config.handlers.directions.api_key}"
 			results = JSON.parse(RestClient.get(json_ip_url))
 			if results['routes'].any?
 				response.reply("It is #{results['routes'][0]['legs'][0]['distance']['text'].gsub('mi', 'miles')} or #{results['routes'][0]['legs'][0]['duration']['text'].gsub('mins', 'minutes')} from #{results['routes'][0]['legs'][0]['start_address'].gsub(', USA', '').gsub(/\d{5}/, '')} to #{results['routes'][0]['legs'][0]['end_address'].gsub(', USA', '').gsub(/\d{5}/, '')}")
