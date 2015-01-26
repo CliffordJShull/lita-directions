@@ -18,7 +18,7 @@ module Lita
 			json_ip_url = "https://maps.googleapis.com/maps/api/directions/json?origin=#{from}&destination=#{to}&key=#{Lita.config.handlers.directions.api_key}"
 			results = JSON.parse(RestClient.get(json_ip_url))
 			if results['routes'].any?
-				response.reply("It is #{results['routes'][0]['legs'][0]['distance']['text'].gsub('mi', 'miles')} or #{results['routes'][0]['legs'][0]['duration']['text'].gsub('mins', 'minutes')} from #{results['routes'][0]['legs'][0]['start_address'].gsub(', USA', '').gsub(/\d{5}/, '')} to #{results['routes'][0]['legs'][0]['end_address'].gsub(', USA', '').gsub(/\d{5}/, '')}")
+				response.reply("It is a #{results['routes'][0]['legs'][0]['distance']['text'].gsub('mi', 'miles')} drive from #{results['routes'][0]['legs'][0]['start_address'].gsub(', USA', '').gsub(/\d{5}/, '')} to #{results['routes'][0]['legs'][0]['end_address'].gsub(', USA', '').gsub(/\d{5}/, '')}. The approximate drive time is #{results['routes'][0]['legs'][0]['duration']['text'].gsub('mins', 'minutes')}."
 				response.reply(URI.encode("https://www.google.com/maps/dir/#{from}/#{to}/"))
 			else
 				response.reply(["Umm, you might want to double-check that.", "I think you did it wrong.", "There was an error, I think it was your fault.", "I'm pretty sure you messed up."].sample)
