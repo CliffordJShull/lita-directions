@@ -8,7 +8,7 @@ Also returns a link to the directions via google maps.
 Add lita-directions to your Lita Gemfile:
 
 ``` ruby
-gem "lita-weather"
+gem "lita-directions"
 ```
 
 ## Configuration
