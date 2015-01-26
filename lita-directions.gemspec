@@ -3,8 +3,8 @@ Gem::Specification.new do |spec|
   spec.version       = "0.0.6"
   spec.authors       = ["Dan Cash"]
   spec.email         = ["dancash04@gmail.com"]
-  spec.description   = %q{Simple Lita gem to get time and distance between two points via google directions api}
-  spec.summary       = %q{See above}
+  spec.description   = %q{A Lita handler to get time/distance calculations and provide directions from google maps}
+  spec.summary       = %q{See Description}
   spec.homepage      = "https://github.com/cashman04/lita-directions/"
   spec.license       = "MIT"
   spec.metadata      = { "lita_plugin_type" => "handler" }
@@ -17,9 +17,5 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "lita", ">= 4.1"
 
   spec.add_development_dependency "bundler", "~> 1.3"
-  spec.add_development_dependency "rake"
-  spec.add_development_dependency "rack-test"
   spec.add_development_dependency "rspec", ">= 3.0.0"
-  spec.add_development_dependency "simplecov"
-  spec.add_development_dependency "coveralls"
 end
