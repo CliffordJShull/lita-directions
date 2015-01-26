@@ -10,16 +10,6 @@ Add lita-directions to your Lita Gemfile:
 gem "lita-directions"
 ```
 
-## Configuration
-
-This plugin requires a api key from The Google Directions api.
-
-``` ruby
-Lita.configure do |config|
-  config.handlers.directions.api_key = "xxxxxxxxxxxx-1234567890"
-end
-```
-
 ## Usage
 
 ```
