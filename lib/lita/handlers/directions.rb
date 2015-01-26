@@ -5,13 +5,10 @@ module Lita
 		route(/^(?:how\s+far\s+is\s+it\s+from\s+)?(.+)\s+to(.+)/i, :get_directions, command: true )
 	
 		def get_directions(response)
-<<<<<<< HEAD
 			if Lita.config.handlers.directions.api_key.nil?
 				response.reply("Please get an API key from https://console.developers.google.com, and follow the instructions on https://github.com/cashman04/lita-direction to configure.")
 				return
 			end
-=======
->>>>>>> 632044de254fa007943955b8b41f25c78d0e254b
 			from = response.matches[0][0]
 			to = response.matches[0][1]
 			json_ip_url = "https://maps.googleapis.com/maps/api/directions/json?origin=#{from}&destination=#{to}"
