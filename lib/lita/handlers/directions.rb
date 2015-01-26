@@ -11,6 +11,7 @@ module Lita
 		def get_directions(response)
 			if Lita.config.handlers.directions.api_key.nil?
 				response.reply("Please get an API key from https://console.developers.google.com, and follow the instructions on https://github.com/cashman04/lita-direction to configure.")
+				return
 			end
 			from = response.matches[0][0]
 			to = response.matches[0][1]
