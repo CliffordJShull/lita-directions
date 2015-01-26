@@ -6,7 +6,7 @@ module Lita
 			config.api_key = nil
 		end
 	
-		route(/^(?:how\s+far\s+is\s+it\s+from\s+)?(.+)\s+to(.+)/i, :get_directions, command: true )
+		route(/^(?:how\s+do\s+I\s+you\s+get\s+far\s+is\s+it\s+from\s+)?(.+)\s+to(.+)/i, :get_directions, command: true )
 	
 		def get_directions(response)
 			if Lita.config.handlers.directions.api_key.nil?
