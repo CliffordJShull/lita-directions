@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name          = "lita-directions"
-  spec.version       = "0.0.7"
+  spec.version       = "0.0.8"
   spec.authors       = ["Dan Cash"]
   spec.email         = ["dancash04@gmail.com"]
   spec.description   = %q{A Lita handler to get time/distance calculations and provide directions from google maps}
@@ -15,8 +15,8 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_runtime_dependency "lita", ">= 4.1"
-  spec.add_runtime_dependency "rest-client", ">= 1.0"
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rspec", ">= 3.0.0"
+  spec.add_development_dependency "rest-client", "~> 1.0"
 end
